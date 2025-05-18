@@ -241,7 +241,7 @@ export default function StudentsPage() {
       </div>
 
       {/* Pagination */}
-      <div className="flex flex-col sm:flex-row justify-between items-center mt-4 gap-3">
+      <div className="flex flex-col sm:flex-row justify-between items-center m-1">
         <div className="text-xs sm:text-sm text-gray-700 order-2 sm:order-1">
           Showing{" "}
           <span className="font-medium">

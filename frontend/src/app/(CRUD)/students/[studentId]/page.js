@@ -3,6 +3,7 @@ import React, { use, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useStudentApi } from "@/hooks/useStudent";
 import { ArrowLeft, Save, Loader2, User, X, Edit } from "lucide-react";
+import Link from "next/link";
 
 // This component handles both view and edit modes for students
 export default function StudentPage({ params }) {
@@ -186,13 +187,13 @@ export default function StudentPage({ params }) {
     <div className="p-3 md:p-6 max-w-5xl mx-auto">
       {/* Header with back button */}
       <div className="flex items-center mb-6 gap-2">
-        <a
+        <Link
           href="/students"
           className="flex items-center justify-center gap-2 px-4 py-2 border border-gray-300 rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors shadow-sm font-medium"
         >
           <ArrowLeft size={16} />
           <span>Back</span>
-        </a>
+        </Link>
         <h1 className="text-xl md:text-2xl font-bold text-gray-800">
           {formTitle}
         </h1>
@@ -567,12 +568,12 @@ export default function StudentPage({ params }) {
 
           {/* Form Actions */}
           <div className="mt-8 flex justify-end gap-3">
-            <a
+            <Link
               href="/students"
               className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
               {isViewMode ? "Back" : "Cancel"}
-            </a>
+            </Link>
 
             {!isViewMode && (
               <button
